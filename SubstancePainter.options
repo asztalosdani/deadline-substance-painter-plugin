@@ -1,0 +1,41 @@
+[ProjectFile]
+Type=filename
+Label=Project File
+Category=Settings
+Index=0
+Description=The project filename as it exists on the network.
+Required=true
+DisableIfBlank=false
+Default=
+
+[Preset]
+Type=filename
+Label=Preset
+Category=Settings
+Index=1
+Description=Export preset name or a filepath to a .spexp file
+Required=true
+DisableIfBlank=false
+Default=
+
+[ExportPath]
+Type=folder
+Label=Export folder
+Category=Settings
+Index=2
+Description=Path to the folder where the maps will be exported
+Required=true
+DisableIfBlank=false
+Default=
+
+[Format]
+Type=enum
+Items=bmp;ico;jpeg;jng;pbm;pgm;ppm;png;targa;tiff;wbmp;xpm;gif;hdr;exr;j2k;jpeg-2000;pfm;psd
+Label=Export format
+Category=Settings
+Index=3
+Description=Export image format
+Required=true
+DisableIfBlank=false
+Default=tiff
+

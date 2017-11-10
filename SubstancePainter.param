@@ -1,0 +1,34 @@
+[About]
+Type=label
+Label=About
+Category=About Plugin
+CategoryOrder=-1
+Index=0
+Default=Substance Painter Plugin for Deadline
+Description=Not configurable
+
+[ConcurrentTasks]
+Type=label
+Label=ConcurrentTasks
+Category=About Plugin
+CategoryOrder=-1
+Index=0
+Default=True
+Description=Not configurable
+
+[SubstancePainterRenderExecutable]
+Type=multilinemultifilename
+Label=Substance Painter Executable
+Category=Render Executables
+CategoryOrder=0
+Default=C:\Program Files\Allegorithmic\Substance Painter\Substance Painter.exe
+Description=The path to the Substance Painter executable file used for rendering. Enter alternative paths on separate lines.
+
+
+[SubstancePainterPort]
+Type=integer
+Label=Substance Painter Port
+Category=API
+CategoryOrder=1
+Default=60041
+Description=The port number set in the Substance Painter plugin.
