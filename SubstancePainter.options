@@ -39,3 +39,22 @@ Required=true
 DisableIfBlank=false
 Default=tiff
 
+[BitDepth]
+Type=enum
+Items=8;16;32
+Label=Bit depth
+Category=Settings
+Index=4
+Description=Bit per channel to use
+DisableIfBlank=false
+Default=8
+
+[TextureSets]
+Type=string
+Label=Texture sets
+Category=Settings
+Index=5
+Description=Texture sets to export. Separate texture set names with commas, or leave blank to export all.
+DisableIfBlank=false
+Default=
+

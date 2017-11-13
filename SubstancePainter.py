@@ -55,6 +55,10 @@ class SubstancePainterPlugin(DeadlinePlugin):
         preset = self.GetPluginInfoEntry("Preset").replace("\\", "/")
         export_path = self.GetPluginInfoEntry("ExportPath").replace("\\", "/")
         format_ = self.GetPluginInfoEntry("Format")
+        stack_paths = json.dumps(self.GetPluginInfoEntryWithDefault("TextureSets", "").split(","))
+        bit_depth = int(self.GetPluginInfoEntryWithDefault("BitDepth", "8"))
+
+        map_info = json.dumps(dict(bitDepth=bit_depth))
 
         self.SetStatusMessage("Opening file")
         print 'opening file', project_file
@@ -63,7 +67,8 @@ class SubstancePainterPlugin(DeadlinePlugin):
         print painter.execScript('alg.project.open("{}")'.format(project_file))
 
         self.SetStatusMessage("Exporting")
-        command = 'alg.mapexport.exportDocumentMaps("{preset}", "{export_path}", "{format}", {{}}, ["1001"]);'.format(preset=preset, export_path=export_path, format=format_)
+        command = 'alg.mapexport.exportDocumentMaps("{preset}", "{export_path}", "{format}", {map_info}, {stack_paths});'.format(
+            preset=preset, export_path=export_path, format=format_, map_info=map_info, stack_paths=stack_paths)
         print 'executing command', command
         print painter.execScript(command)
 
