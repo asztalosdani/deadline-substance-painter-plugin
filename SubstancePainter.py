@@ -105,7 +105,7 @@ class SubstancePainterProces(ManagedProcess):
 
 # Json server connection
 _PAINTER_ROUTE = '/run.json'
-_HEADERS = {'Content-type': 'text/plain', 'Accept': 'application/json'}
+_HEADERS = {'Content-type': 'application/json', 'Accept': 'application/json'}
 
 
 ###############################################################################################
